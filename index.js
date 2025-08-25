@@ -5,11 +5,11 @@ import cors from "cors";
 // Import service account key
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 // Initialize Firebase Admin
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(serviceAccount)
 });
 
 const app = express();
