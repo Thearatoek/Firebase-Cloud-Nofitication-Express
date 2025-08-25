@@ -1,2 +1,5 @@
 serviceAccountKey.json
 serviceAccountKey.json
+.env
+.env
+node_modules/
